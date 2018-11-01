@@ -3,14 +3,17 @@ import Router from 'vue-router'
 
 import Login from '@/views/login.vue'
 import Home from '@/views/home.vue'
+import Users from '@/views/users.vue'
 
 Vue.use(Router)
 
 export default new Router({
     routes: [{
-        home: 'home',
+        name: 'home',
         path: '/',
-        component: Home
+        component: Home,
+        //设置成子路由上
+        children: [{ path: '/users', component: Users }]
     }, {
         name: 'login',
         path: '/login',

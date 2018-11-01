@@ -33,8 +33,31 @@
       }
     },
     methods:{
-      handleLogin(){
-        this.$http.post('login',this.formData).then(res=>{
+      // handleLogin(){
+      //   this.$http.post('login',this.formData).then(res=>{
+      //     console.log(res)
+      //     const {meta}=res.data
+      //     if(meta.status===200){
+      //       //设置session
+      //       //设置登陆权限
+      //      const token = res.data.data.token
+      //      sessionStorage.setItem('token',token)
+
+
+      //       this.$message.success(meta.msg)
+      //       this.$router.push({name:'home'})
+      //     }else{
+      //       //提示框
+      //       this.$message.error(meta.msg)
+      //     }
+      //   })
+      // }
+
+      
+      //es6处理回调函数的方法   async
+     async handleLogin(){
+
+       const res=await this.$http.post('login',this.formData)
           console.log(res)
           const {meta}=res.data
           if(meta.status===200){
@@ -50,7 +73,7 @@
             //提示框
             this.$message.error(meta.msg)
           }
-        })
+       
       }
     }
     }
