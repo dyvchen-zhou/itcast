@@ -8,7 +8,13 @@ import 'element-ui/lib/theme-chalk/index.css';
 import '@/assets/css/index.css'
 
 import router from './router'
-import HttpTool from './plugins/http';
+import HttpTool from './plugins/http'
+import moment from 'moment'
+// 全局过滤器
+// 格式化日期
+Vue.filter('fmtDate', (value, fmtString) => {
+    return moment(value).format(fmtString)
+})
 
 Vue.use(ElementUI)
 Vue.use(HttpTool)

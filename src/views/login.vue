@@ -13,7 +13,7 @@
     
         <el-form-item label="密码">
     
-            <el-input v-model="formData.password"></el-input>
+            <el-input v-model="formData.password" type="password"></el-input>
     
         </el-form-item>
     
@@ -53,7 +53,7 @@
       //   })
       // }
 
-      
+
       //es6处理回调函数的方法   async
      async handleLogin(){
 

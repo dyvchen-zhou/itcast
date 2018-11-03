@@ -80,7 +80,9 @@
 
 
             <el-main class="main">
+
                 <router-view></router-view>
+
             </el-main>
 
         </el-container>
@@ -95,6 +97,7 @@
 
         // 在首页渲染之前 进行判断
         //登陆验证
+        //钩子函数数据观测 (data observer) 和 event/watcher 事件配置之前被调用
         beforeCreate() {
             const token =sessionStorage.getItem('token')
             if(!token){
