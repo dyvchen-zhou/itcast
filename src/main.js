@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 
+import MyBread from '@/components/myBread.vue'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import '@/assets/css/index.css'
@@ -15,6 +16,11 @@ import moment from 'moment'
 Vue.filter('fmtDate', (value, fmtString) => {
     return moment(value).format(fmtString)
 })
+
+
+// 定义全局面包屑组件
+Vue.component(MyBread.name, MyBread)
+
 
 Vue.use(ElementUI)
 Vue.use(HttpTool)

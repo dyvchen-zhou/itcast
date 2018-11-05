@@ -147,7 +147,8 @@
     </el-table-column>
     <el-table-column
       label="操作"
-      width="300">
+      min-width="300">
+      <!-- 最小宽度 -->
          <template slot-scope="scope">
         <el-button plain size="mini" type="primary" icon="el-icon-edit" circle @click="showEditdia(scope.row)"></el-button>
         <el-button plain size="mini" type="danger" icon="el-icon-delete" circle @click="showDelefirm(scope.row)"></el-button>
@@ -248,10 +249,10 @@ export default {
             this.getRoleByUserId = user.id
             //获取用户的名字
             this.currUserName = user.username
-            //获取职员的信息
+            //获取职员的信息列表
             const res =await this.$http.get('roles') 
             this.roles=res.data.data
-            console.log(res);
+            console.log(this.roles);
             //显示当前用户角色
             // console.log(user);
             // 要通过users/:id请求 获取当前用户的role_id
