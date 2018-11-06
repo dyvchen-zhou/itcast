@@ -289,6 +289,8 @@ export default {
 
         //修改状态
         async changeMgState(user){
+            console.log(user);
+            
             const res = await this.$http.put(`users/${user.id}/state/${user.mg_state}`)
             // console.log(res);
             const {meta:{msg,status}}=res.data

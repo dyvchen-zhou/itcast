@@ -51,9 +51,9 @@
         <template slot="title"><i class="el-icon-setting"></i>商品管理</template>
         <el-menu-item-group>
 
-          <el-menu-item index="3-1">商品列表</el-menu-item>
+          <el-menu-item index="/goodslist">商品列表</el-menu-item>
           <el-menu-item index="3-2">分类参数</el-menu-item>
-          <el-menu-item index="3-3">商品分类</el-menu-item>
+          <el-menu-item index="/goodscate">商品分类</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
 
@@ -98,12 +98,13 @@
         // 在首页渲染之前 进行判断
         //登陆验证
         //钩子函数数据观测 (data observer) 和 event/watcher 事件配置之前被调用
+        //因为router使用了导航守卫所以这里不与要判断了
         beforeCreate() {
-            const token =sessionStorage.getItem('token')
-            if(!token){
-                this.$message.warning('请先登陆')
-                this.$router.push('/login')
-            }
+            // const token =sessionStorage.getItem('token')
+            // if(!token){
+            //     this.$message.warning('请先登陆')
+            //     this.$router.push('/login')
+            // }
         },
         methods:{
           // 退出功能

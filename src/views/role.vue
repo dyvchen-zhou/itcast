@@ -18,6 +18,8 @@
       <template slot-scope="scope">
           <!-- 渲染页面 -->
           <!-- 先渲染一行，自里面渲染两列，再在第二列 渲染一行两列 -->
+          <!-- scope.row 每个人的 -->
+          <!-- scope.row 就是数组中的每个对象 其中 row是固定的 -->
           <el-row class="level1" v-for="(item1,index) in scope.row.children" :key="index">
               <el-col :span="4">
                         <el-tag   @close="deleRight(scope.row,item1.id)" closable type="success">{{item1.authName}}</el-tag>
@@ -114,7 +116,7 @@ export default {
     methods: {
     //修改权限操作
     async setRight(){
-        this.dialogVisible=false
+       
 
         //获取当前选中的id
         const arr1 =this.$refs.tree.getCheckedKeys()
@@ -126,6 +128,8 @@ export default {
         const res=await this.$http.post(`roles/${this.currRoleId}/rights`, {
         rids: arr.join(',')
       })
+      
+       this.dialogVisible=false
         
         const {meta:{msg,status}}=res.data
         if(status===200){
@@ -179,6 +183,8 @@ export default {
         // console.log(res)
 
         this.list = res.data.data
+        console.log(this.list);
+        
        }
     }
 }
