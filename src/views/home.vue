@@ -137,7 +137,7 @@
         background-color: #b3c0d1;
     }
     .aside {
-        background-color: #d3dce6;
+        background-color: white;
     }
     .main {
         background-color: #e9eef3;
