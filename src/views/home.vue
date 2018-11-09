@@ -52,7 +52,7 @@
         <el-menu-item-group>
 
           <el-menu-item index="/goodslist">商品列表</el-menu-item>
-          <el-menu-item index="3-2">分类参数</el-menu-item>
+          <el-menu-item index="/params">分类参数</el-menu-item>
           <el-menu-item index="/goodscate">商品分类</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
@@ -61,7 +61,7 @@
         <template slot="title"><i class="el-icon-setting"></i>订单管理</template>
         <el-menu-item-group>
 
-          <el-menu-item index="4-1">订单列表</el-menu-item>
+          <el-menu-item index="/order">订单列表</el-menu-item>
 
         </el-menu-item-group>
       </el-submenu>
@@ -70,7 +70,7 @@
         <template slot="title"><i class="el-icon-setting"></i>数据统计</template>
         <el-menu-item-group>
 
-          <el-menu-item index="5-1">数据报表</el-menu-item>
+          <el-menu-item index="/reports">数据报表</el-menu-item>
  
         </el-menu-item-group>
       </el-submenu>

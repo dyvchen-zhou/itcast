@@ -8,7 +8,10 @@ import Rights from '@/views/rights.vue'
 import Role from '@/views/role.vue'
 import Goodscate from '@/views/goodscate.vue'
 import Goodslist from '@/views/goodslist.vue'
-import Goodsadd from '@/views/Goodsadd.vue'
+import Goodsadd from '@/views/goodsadd.vue'
+import Params from '@/views/cateparams.vue'
+import Order from '@/views/order.vue'
+import Reports from '@/views/reports.vue'
 
 Vue.use(Router)
 
@@ -24,7 +27,10 @@ const router = new Router({
             { path: '/role', component: Role },
             { path: '/goodscate', component: Goodscate },
             { path: '/goodslist', component: Goodslist },
-            { path: '/goodsadd', component: Goodsadd }
+            { path: '/goodsadd', component: Goodsadd },
+            { path: '/params', component: Params },
+            { path: '/order', component: Order },
+            { path: '/reports', component: Reports }
         ]
     }, {
         name: 'login',
